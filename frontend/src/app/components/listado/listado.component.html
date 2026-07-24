@@ -1,0 +1,183 @@
+<div class="container">
+
+
+<div class="text-center mb-4">
+
+<h2>
+
+<i class="bi bi-laptop"></i>
+
+Inventario de Equipos
+
+</h2>
+
+
+<h5 class="text-primary">
+
+Equipos registrados:
+
+{{equipos.length}}
+
+</h5>
+
+</div>
+
+
+
+<div class="input-group mb-4">
+
+<input
+
+type="number"
+
+class="form-control"
+
+placeholder="Buscar código"
+
+[(ngModel)]="codigoBuscar">
+
+
+<button
+
+class="btn btn-primary"
+
+(click)="buscar()">
+
+<i class="bi bi-search"></i>
+
+Buscar
+
+</button>
+
+
+<button
+
+class="btn btn-secondary"
+
+(click)="mostrarTodos()">
+
+Mostrar Todos
+
+</button>
+
+
+</div>
+
+
+
+<div class="row">
+
+
+<div
+
+class="col-lg-4 mb-4"
+
+*ngFor="let equipo of equipos">
+
+
+<div class="card shadow h-100">
+
+
+<div class="card-body">
+
+
+<h4 class="card-title">
+
+<i class="bi bi-pc-display"></i>
+
+{{equipo.nombre}}
+
+</h4>
+
+
+<hr>
+
+
+<p>
+
+<b>Código:</b>
+
+{{equipo.codigo}}
+
+</p>
+
+
+<p>
+
+<b>Categoría:</b>
+
+{{equipo.categoria}}
+
+</p>
+
+
+<p>
+
+<b>Laboratorio:</b>
+
+{{equipo.laboratorio}}
+
+</p>
+
+
+<p>
+
+<b>Responsable:</b>
+
+{{equipo.responsable}}
+
+</p>
+
+
+<label>
+
+Estado
+
+</label>
+
+
+<select
+
+class="form-select"
+
+[(ngModel)]="equipo.estado">
+
+
+<option>Disponible</option>
+
+<option>En mantenimiento</option>
+
+<option>Prestado</option>
+
+<option>Dañado</option>
+
+</select>
+
+
+
+<button
+
+class="btn btn-success w-100 mt-3"
+
+(click)="actualizarEstado(equipo)">
+
+<i class="bi bi-arrow-repeat"></i>
+
+Actualizar Estado
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>

@@ -1,0 +1,107 @@
+<div class="container mt-4">
+
+
+<h3>
+
+<i class="bi bi-plus-circle"></i>
+
+Registrar equipo
+
+</h3>
+
+
+<div class="card shadow p-4">
+
+
+<div class="row">
+
+
+<div class="col-md-6">
+
+<label>Código</label>
+
+<input 
+class="form-control"
+type="number"
+[(ngModel)]="equipo.codigo">
+
+</div>
+
+
+
+<div class="col-md-6">
+
+<label>Nombre</label>
+
+<input 
+class="form-control"
+[(ngModel)]="equipo.nombre">
+
+</div>
+
+
+<div class="col-md-6 mt-3">
+
+<label>Categoría</label>
+
+<input 
+class="form-control"
+[(ngModel)]="equipo.categoria">
+
+</div>
+
+
+
+<div class="col-md-6 mt-3">
+
+<label>Laboratorio</label>
+
+<input 
+class="form-control"
+[(ngModel)]="equipo.laboratorio">
+
+</div>
+
+
+
+<div class="col-md-6 mt-3">
+
+<label>Estado</label>
+
+<input 
+class="form-control"
+[(ngModel)]="equipo.estado">
+
+</div>
+
+
+
+<div class="col-md-6 mt-3">
+
+<label>Responsable</label>
+
+<input 
+class="form-control"
+[(ngModel)]="equipo.responsable">
+
+</div>
+
+
+</div>
+
+
+<button 
+class="btn btn-primary mt-4"
+(click)="guardar()">
+
+<i class="bi bi-save"></i>
+
+Guardar
+
+</button>
+
+
+</div>
+
+
+</div>
